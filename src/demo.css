@@ -1,0 +1,87 @@
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.header {
+  padding: 15px;
+  background-color: #cacaca;
+}
+.content {
+  padding: 15px;
+  background-color: aquamarine;
+}
+.footer {
+  padding: 15px;
+  background-color: blanchedalmond;
+}
+.container {
+  height: 25vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 25% auto 25%;
+}
+
+.container-2 {
+  display: grid;
+  grid-template-columns: [first] minmax(40px, 100px) [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+  grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
+}
+
+.container-3 {
+  display: grid;
+  grid-template-columns: 25px 50px auto 50px 25px;
+  grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
+}
+
+.item-a {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: row1;
+  grid-row-end: 3;
+  background-color: orange;
+}
+.item-b {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  background-color: lemonchiffon;
+}
+
+.item-c {
+  grid-column: 3 / span 2;
+  grid-row: third-line/ 4;
+  background-color: lightgreen;
+}
+
+.item-d {
+  background-color: lime;
+  grid-area: 1 / col4-start / row4/ 5;
+}
+
+.item-e {
+  grid-area: header;
+  background-color: linen;
+}
+.item-f {
+  grid-area: main;
+  background-color: maroon;
+}
+.item-g {
+  grid-area: sidebar;
+  background-color: mediumaquamarine;
+}
+.item-h {
+  grid-area: footer;
+  background-color: mediumorchid;
+}
+.container-4 {
+  display: grid;
+  grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}
